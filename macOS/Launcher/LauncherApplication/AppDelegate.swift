@@ -35,7 +35,7 @@ extension AppDelegate: NSApplicationDelegate {
 								object: mainAppIdentifier)
             
             let url = URL(fileURLWithPath: Bundle.main.bundlePath).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
-            let path = url.appendingPathComponent("MacOS").appendingPathComponent("MainApplication").path
+            let path = url.path
 
             if #available(OSX 10.15, *) {
                 NSWorkspace.shared.openApplication(at: url, 
